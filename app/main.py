@@ -27,3 +27,7 @@ def square(e: int):
 @app.get("/divide/{f}/{g}")
 def divide(f: int, g: int):
     return {"quotient": f / g}
+
+@app.get("/modulo/{h}/{i}")
+def modulo(h: int, i, int):
+    return {"remainder": h % i}
