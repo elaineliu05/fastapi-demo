@@ -12,14 +12,22 @@ app = FastAPI()
 def zone_apex():
     return {"Hello": "Elaine Liu"}
 
-@app.get("/add/{a}/{b}")
+@app.get("/sum/{a}/{b}")
 def add(a: int, b: int):
     return {"sum": a + b}
 
 @app.get("/multiply/{c}/{d}")
 def multiply(c: int, d: int):
-    return {"sum": c * d}
+    return {"product": c * d}
 
 @app.get("/square/{e}")
 def square(e: int):
     return {"square": e * e}
+
+@app.get("/divide/{f}/{g}")
+def divide(f: int, g: int):
+    return {"quotient": f / g}
+
+@app.get("/modulo/{h}/{i}")
+def modulo(h: int, i, int):
+    return {"remainder": h % i}
